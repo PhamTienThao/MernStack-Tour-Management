@@ -14,10 +14,12 @@ const TourCard = ({tour}) => {
   return (
     <div className="tour__card">
       <Card>
-        <div className="tour__img">
-          <img src={photo} alt="" />
-          {featured && <span>Featured</span>}
-        </div>
+        <Link to={`/tours/${_id}`}>
+          <div className="tour__img">
+            <img src={photo} alt="" />
+            {featured && <span>Featured</span>}
+          </div>
+        </Link>
         <CardBody>
           <div className="card__top d-flex align-items-center justify-content-between">
             <span className="tour__location d-flex align-items-center gap-1">
